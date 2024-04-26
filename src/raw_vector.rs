@@ -20,8 +20,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::raw_vector::AccessRaw;
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::raw_vector::AccessRaw;
+/// use simple_sds_sbwt::bits;
 ///
 /// struct Example(Vec<u64>);
 ///
@@ -167,8 +167,8 @@ pub trait AccessRaw {
 ///
 /// # Examples
 /// ```
-/// use simple_sds::raw_vector::PushRaw;
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::raw_vector::PushRaw;
+/// use simple_sds_sbwt::bits;
 ///
 /// struct Example(Vec<bool>, Vec<u64>);
 ///
@@ -232,7 +232,7 @@ pub trait PushRaw {
 ///
 /// # Examples
 /// ```
-/// use simple_sds::raw_vector::PopRaw;
+/// use simple_sds_sbwt::raw_vector::PopRaw;
 ///
 /// struct Example(Vec<bool>, Vec<u64>);
 ///
@@ -324,7 +324,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::{RawVector, AccessRaw};
+    /// use simple_sds_sbwt::raw_vector::{RawVector, AccessRaw};
     ///
     /// let mut v = RawVector::with_len(137, false);
     /// assert_eq!(v.count_ones(), 0);
@@ -344,7 +344,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let v = RawVector::new();
     /// assert!(v.is_empty());
@@ -364,7 +364,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let v = RawVector::with_len(137, false);
     /// assert_eq!(v.len(), 137);
@@ -384,7 +384,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let v = RawVector::with_capacity(137);
     /// assert!(v.capacity() >= 137);
@@ -401,7 +401,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// assert_eq!(RawVector::size_by_params(247), 6);
     /// ```
@@ -414,7 +414,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::{RawVector, AccessRaw};
+    /// use simple_sds_sbwt::raw_vector::{RawVector, AccessRaw};
     ///
     /// let mut original = RawVector::with_len(137, false);
     /// original.set_bit(1, true); original.set_bit(33, true);
@@ -446,7 +446,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let mut v = RawVector::new();
     /// v.resize(137, true);
@@ -470,7 +470,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let mut v = RawVector::with_len(137, true);
     /// assert_eq!(v.len(), 137);
@@ -489,7 +489,7 @@ impl RawVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::raw_vector::RawVector;
+    /// use simple_sds_sbwt::raw_vector::RawVector;
     ///
     /// let mut v = RawVector::with_len(137, false);
     /// v.reserve(318);
@@ -655,8 +655,8 @@ impl AsRef<[u64]> for RawVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::raw_vector::{RawVector, RawVectorWriter, AccessRaw, PushRaw};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::raw_vector::{RawVector, RawVectorWriter, AccessRaw, PushRaw};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let filename = serialize::temp_file_name("raw-vector-writer");
@@ -881,9 +881,9 @@ impl Drop for RawVectorWriter {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::raw_vector::{RawVector, RawVectorMapper, AccessRaw, PushRaw};
-/// use simple_sds::serialize::{MemoryMap, MemoryMapped, MappingMode};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::raw_vector::{RawVector, RawVectorMapper, AccessRaw, PushRaw};
+/// use simple_sds_sbwt::serialize::{MemoryMap, MemoryMapped, MappingMode};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let filename = serialize::temp_file_name("raw-vector-mapper");

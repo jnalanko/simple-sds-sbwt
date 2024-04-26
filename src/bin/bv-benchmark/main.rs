@@ -1,9 +1,9 @@
-use simple_sds::ops::{BitVec, Rank, Select, SelectZero};
-use simple_sds::serialize::Serialize;
-use simple_sds::bit_vector::BitVector;
-use simple_sds::rl_vector::RLVector;
-use simple_sds::sparse_vector::SparseVector;
-use simple_sds::{internal, serialize};
+use simple_sds_sbwt::ops::{BitVec, Rank, Select, SelectZero};
+use simple_sds_sbwt::serialize::Serialize;
+use simple_sds_sbwt::bit_vector::BitVector;
+use simple_sds_sbwt::rl_vector::RLVector;
+use simple_sds_sbwt::sparse_vector::SparseVector;
+use simple_sds_sbwt::{internal, serialize};
 
 use std::time::Instant;
 use std::{env, process};

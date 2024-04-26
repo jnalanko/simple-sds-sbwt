@@ -32,8 +32,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{Vector, Resize, Pack, Access, AccessIter};
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::ops::{Vector, Resize, Pack, Access, AccessIter};
+/// use simple_sds_sbwt::bits;
 ///
 /// #[derive(Clone, Debug, PartialEq, Eq)]
 /// struct Example(Vec<u8>);
@@ -338,7 +338,7 @@ impl<'a, VectorType: Access<'a>> FusedIterator for AccessIter<'a, VectorType> {}
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{Vector, Push, Pop};
+/// use simple_sds_sbwt::ops::{Vector, Push, Pop};
 ///
 /// struct Example(Vec<u8>);
 ///
@@ -424,7 +424,7 @@ pub trait Pop: Vector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{Vector, Access, AccessIter, VectorIndex};
+/// use simple_sds_sbwt::ops::{Vector, Access, AccessIter, VectorIndex};
 /// use std::cmp;
 ///
 /// #[derive(Clone, Debug, PartialEq, Eq)]
@@ -672,9 +672,9 @@ pub trait VectorIndex<'a>: Access<'a> {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, Rank, Select, PredSucc};
-/// use simple_sds::raw_vector::{RawVector, AccessRaw};
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::ops::{BitVec, Rank, Select, PredSucc};
+/// use simple_sds_sbwt::raw_vector::{RawVector, AccessRaw};
+/// use simple_sds_sbwt::bits;
 /// use std::cmp;
 ///
 /// struct NaiveBitVector {

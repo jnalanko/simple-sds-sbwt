@@ -49,8 +49,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{Vector, Access, VectorIndex};
-/// use simple_sds::wavelet_matrix::WaveletMatrix;
+/// use simple_sds_sbwt::ops::{Vector, Access, VectorIndex};
+/// use simple_sds_sbwt::wavelet_matrix::WaveletMatrix;
 ///
 /// // Construction
 /// let source: Vec<u64> = vec![1, 0, 3, 1, 1, 2, 4, 5, 1, 2, 1, 7, 0, 1];
@@ -276,8 +276,8 @@ impl Serialize for WaveletMatrix {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::VectorIndex;
-/// use simple_sds::wavelet_matrix::WaveletMatrix;
+/// use simple_sds_sbwt::ops::VectorIndex;
+/// use simple_sds_sbwt::wavelet_matrix::WaveletMatrix;
 ///
 /// // Construction
 /// let source: Vec<u64> = vec![1, 0, 3, 1, 1, 2, 4, 5, 1, 2, 1, 7, 0, 1];
@@ -327,7 +327,7 @@ impl<'a> FusedIterator for ValueIter<'a> {}
 /// # Examples
 ///
 /// ```
-/// use simple_sds::wavelet_matrix::WaveletMatrix;
+/// use simple_sds_sbwt::wavelet_matrix::WaveletMatrix;
 ///
 /// let source: Vec<u64> = vec![1, 0, 3, 1, 1, 2, 4, 5, 1, 2, 1, 7, 0, 1];
 /// let wm = WaveletMatrix::from(source.clone());

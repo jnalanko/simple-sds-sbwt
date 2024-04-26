@@ -1,10 +1,10 @@
 use std::cmp;
 
-use simple_sds::bit_vector::BitVector;
-use simple_sds::ops::BitVec;
-use simple_sds::raw_vector::{RawVector, PushRaw};
-use simple_sds::serialize::Serialize;
-use simple_sds::internal;
+use simple_sds_sbwt::bit_vector::BitVector;
+use simple_sds_sbwt::ops::BitVec;
+use simple_sds_sbwt::raw_vector::{RawVector, PushRaw};
+use simple_sds_sbwt::serialize::Serialize;
+use simple_sds_sbwt::internal;
 
 use rand::Rng;
 use rand::distributions::Bernoulli;

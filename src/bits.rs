@@ -243,7 +243,7 @@ const _SELECT_IN_BYTE: [u8; 2048] = [
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::low_set(13), 0x1FFF);
 /// ```
@@ -271,7 +271,7 @@ pub unsafe fn low_set_unchecked(n: usize) -> u64 {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::high_set(13), 0xFFF8_0000_0000_0000);
 /// ```
@@ -299,7 +299,7 @@ pub unsafe fn high_set_unchecked(n: usize) -> u64 {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::bit_len(0), 1);
 /// assert_eq!(bits::bit_len(0x1FFF), 13);
@@ -320,7 +320,7 @@ pub fn bit_len(n: u64) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// unsafe {
 ///     assert_eq!(bits::select(0b00100001_00010000, 0), 4);
@@ -374,7 +374,7 @@ pub unsafe fn select(n: u64, rank: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::words_to_bytes(3), 24);
 /// ```
@@ -392,7 +392,7 @@ pub fn words_to_bytes(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::bytes_to_words(8), 1);
 /// assert_eq!(bits::bytes_to_words(9), 2);
@@ -411,7 +411,7 @@ pub fn bytes_to_words(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::round_up_to_word_bytes(0), 0);
 /// assert_eq!(bits::round_up_to_word_bytes(8), 8);
@@ -433,7 +433,7 @@ pub fn round_up_to_word_bytes(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::words_to_bits(3), 192);
 /// ```
@@ -451,7 +451,7 @@ pub fn words_to_bits(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::bits_to_words(64), 1);
 /// assert_eq!(bits::bits_to_words(65), 2);
@@ -470,7 +470,7 @@ pub fn bits_to_words(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::round_up_to_word_bits(0), 0);
 /// assert_eq!(bits::round_up_to_word_bits(64), 64);
@@ -492,7 +492,7 @@ pub fn round_up_to_word_bits(n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::div_round_up(129, 13), 10);
 /// assert_eq!(bits::div_round_up(130, 13), 10);
@@ -512,7 +512,7 @@ pub fn div_round_up(value: usize, n: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::filler_value(false), 0);
 /// assert_eq!(bits::filler_value(true), !0u64);
@@ -530,7 +530,7 @@ pub fn filler_value(value: bool) -> u64 {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::split_offset(123), (1, 59));
 /// ```
@@ -549,7 +549,7 @@ pub fn split_offset(bit_offset: usize) -> (usize, usize) {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// assert_eq!(bits::bit_offset(1, 59), 123);
 /// ```
@@ -575,7 +575,7 @@ pub fn bit_offset(index: usize, offset: usize) -> usize {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// let mut array: Vec<u64> = vec![0];
 /// unsafe {
@@ -617,7 +617,7 @@ pub unsafe fn write_int<T: IndexMut<usize, Output = u64>>(array: &mut T, bit_off
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bits;
+/// use simple_sds_sbwt::bits;
 ///
 /// let array: Vec<u64> = vec![0x37];
 /// unsafe {

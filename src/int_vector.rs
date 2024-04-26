@@ -51,8 +51,8 @@ impl IntVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::int_vector::IntVector;
-    /// use simple_sds::ops::Vector;
+    /// use simple_sds_sbwt::int_vector::IntVector;
+    /// use simple_sds_sbwt::ops::Vector;
     ///
     /// let v = IntVector::new(13).unwrap();
     /// assert!(v.is_empty());
@@ -84,8 +84,8 @@ impl IntVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::int_vector::IntVector;
-    /// use simple_sds::ops::{Vector, Access};
+    /// use simple_sds_sbwt::int_vector::IntVector;
+    /// use simple_sds_sbwt::ops::{Vector, Access};
     ///
     /// let v = IntVector::with_len(4, 13, 1234).unwrap();
     /// assert_eq!(v.len(), 4);
@@ -123,8 +123,8 @@ impl IntVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::int_vector::IntVector;
-    /// use simple_sds::ops::{Vector, Resize};
+    /// use simple_sds_sbwt::int_vector::IntVector;
+    /// use simple_sds_sbwt::ops::{Vector, Resize};
     ///
     /// let v = IntVector::with_capacity(4, 13).unwrap();
     /// assert!(v.is_empty());
@@ -157,7 +157,7 @@ impl IntVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::int_vector::IntVector;
+    /// use simple_sds_sbwt::int_vector::IntVector;
     ///
     /// assert_eq!(IntVector::size_by_params(12, 31), 10);
     /// ```
@@ -350,7 +350,7 @@ impl From<IntVector> for RawVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::int_vector::IntVector;
+/// use simple_sds_sbwt::int_vector::IntVector;
 ///
 /// let source: Vec<u64> = vec![1, 3, 15, 255, 65535];
 /// let v: IntVector = source.iter().cloned().collect();
@@ -409,9 +409,9 @@ impl IntoIterator for IntVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::int_vector::{IntVector, IntVectorWriter};
-/// use simple_sds::ops::{Vector, Access, Push};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::int_vector::{IntVector, IntVectorWriter};
+/// use simple_sds_sbwt::ops::{Vector, Access, Push};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let filename = serialize::temp_file_name("int-vector-writer");
@@ -563,10 +563,10 @@ impl Drop for IntVectorWriter {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::int_vector::{IntVector, IntVectorMapper};
-/// use simple_sds::ops::{Vector, Access};
-/// use simple_sds::serialize::{MemoryMap, MemoryMapped, MappingMode};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::int_vector::{IntVector, IntVectorMapper};
+/// use simple_sds_sbwt::ops::{Vector, Access};
+/// use simple_sds_sbwt::serialize::{MemoryMap, MemoryMapped, MappingMode};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let filename = serialize::temp_file_name("int-vector-mapper");

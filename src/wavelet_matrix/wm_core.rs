@@ -44,7 +44,7 @@ use std::{cmp, io};
 /// # Examples
 ///
 /// ```
-/// use simple_sds::wavelet_matrix::wm_core::WMCore;
+/// use simple_sds_sbwt::wavelet_matrix::wm_core::WMCore;
 ///
 /// // Construction
 /// let source: Vec<u64> = vec![1, 0, 3, 1, 1, 2, 4, 5, 1, 2, 1, 7, 0, 1];

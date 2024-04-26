@@ -60,8 +60,8 @@ impl RankSupport {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::BitVector;
-    /// use simple_sds::bit_vector::rank_support::RankSupport;
+    /// use simple_sds_sbwt::bit_vector::BitVector;
+    /// use simple_sds_sbwt::bit_vector::rank_support::RankSupport;
     ///
     /// let data = vec![false, true, true, false, true, false, true, true, false, false, false];
     /// let bv: BitVector = data.into_iter().collect();
@@ -103,8 +103,8 @@ impl RankSupport {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::BitVector;
-    /// use simple_sds::bit_vector::rank_support::RankSupport;
+    /// use simple_sds_sbwt::bit_vector::BitVector;
+    /// use simple_sds_sbwt::bit_vector::rank_support::RankSupport;
     ///
     /// let data = vec![false, true, true, false, true, false, true, true, false, false, false];
     /// let bv: BitVector = data.into_iter().collect();

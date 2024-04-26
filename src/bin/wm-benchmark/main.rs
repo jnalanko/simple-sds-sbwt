@@ -1,7 +1,7 @@
-use simple_sds::ops::{Vector, Access, VectorIndex};
-use simple_sds::serialize::Serialize;
-use simple_sds::wavelet_matrix::WaveletMatrix;
-use simple_sds::internal;
+use simple_sds_sbwt::ops::{Vector, Access, VectorIndex};
+use simple_sds_sbwt::serialize::Serialize;
+use simple_sds_sbwt::wavelet_matrix::WaveletMatrix;
+use simple_sds_sbwt::internal;
 
 use std::time::Instant;
 use std::{env, process};

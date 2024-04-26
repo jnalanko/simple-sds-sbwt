@@ -70,8 +70,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
-/// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
+/// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
 /// use std::convert::TryFrom;
 ///
 /// let mut builder = SparseBuilder::new(137, 4).unwrap();
@@ -159,9 +159,9 @@ impl SparseVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::BitVector;
-    /// use simple_sds::ops::BitVec;
-    /// use simple_sds::sparse_vector::SparseVector;
+    /// use simple_sds_sbwt::bit_vector::BitVector;
+    /// use simple_sds_sbwt::ops::BitVec;
+    /// use simple_sds_sbwt::sparse_vector::SparseVector;
     /// use std::iter::FromIterator;
     ///
     /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
@@ -187,8 +187,8 @@ impl SparseVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::sparse_vector::SparseVector;
-    /// use simple_sds::ops::{BitVec, Select};
+    /// use simple_sds_sbwt::sparse_vector::SparseVector;
+    /// use simple_sds_sbwt::ops::{BitVec, Select};
     ///
     /// let source: Vec<usize> = vec![3, 4, 4, 7, 11, 19];
     /// let sv = SparseVector::try_from_iter(source.iter().cloned()).unwrap();
@@ -316,8 +316,8 @@ impl SparseVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::BitVec;
-/// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+/// use simple_sds_sbwt::ops::BitVec;
+/// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
 /// use std::convert::TryFrom;
 ///
 /// let mut builder = SparseBuilder::new(300, 5).unwrap();
@@ -401,8 +401,8 @@ impl SparseBuilder {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::ops::BitVec;
-    /// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+    /// use simple_sds_sbwt::ops::BitVec;
+    /// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
     /// use std::convert::TryFrom;
     ///
     /// let mut builder = SparseBuilder::multiset(120, 3);
@@ -571,8 +571,8 @@ impl TryFrom<SparseBuilder> for SparseVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::BitVec;
-/// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+/// use simple_sds_sbwt::ops::BitVec;
+/// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
 /// use std::convert::TryFrom;
 ///
 /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
@@ -789,8 +789,8 @@ impl<'a> Rank<'a> for SparseVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, Select};
-/// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, Select};
+/// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
 /// use std::convert::TryFrom;
 ///
 /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
@@ -889,8 +889,8 @@ impl<'a> FusedIterator for OneIter<'a> {}
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, SelectZero};
-/// use simple_sds::sparse_vector::{SparseVector, SparseBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, SelectZero};
+/// use simple_sds_sbwt::sparse_vector::{SparseVector, SparseBuilder};
 /// use std::convert::TryFrom;
 ///
 /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];

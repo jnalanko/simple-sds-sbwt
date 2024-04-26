@@ -52,8 +52,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 /// builder.try_set(18, 22);
@@ -149,9 +149,9 @@ impl RLVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::BitVector;
-    /// use simple_sds::ops::BitVec;
-    /// use simple_sds::rl_vector::RLVector;
+    /// use simple_sds_sbwt::bit_vector::BitVector;
+    /// use simple_sds_sbwt::ops::BitVec;
+    /// use simple_sds_sbwt::rl_vector::RLVector;
     /// use std::iter::FromIterator;
     ///
     /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
@@ -284,8 +284,8 @@ impl RLVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::BitVec;
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::ops::BitVec;
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 ///
@@ -400,7 +400,7 @@ impl RLBuilder {
     ///
     /// Behavior is undefined if `start < self.len()` of `start + len > usize::MAX`.
     pub unsafe fn set_run_unchecked(&mut self, start: usize, len: usize) {
-        if len <= 0 {
+        if len == 0 {
             return;
         }
         if start == self.len() {
@@ -428,7 +428,7 @@ impl RLBuilder {
 
     // Encodes the current run if necessary and sets the active run to `(self.len(), 0)`.
     fn flush(&mut self) {
-        if self.run.1 <= 0 {
+        if self.run.1 == 0 {
             return;
         }
 
@@ -518,7 +518,7 @@ impl From<RLBuilder> for RLVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 /// builder.try_set(18, 22);
@@ -647,8 +647,8 @@ impl<'a> FusedIterator for RunIter<'a> {}
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec};
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::ops::{BitVec};
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 /// builder.try_set(18, 22);
@@ -792,8 +792,8 @@ impl<'a> Rank<'a> for RLVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, Select};
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, Select};
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 /// builder.try_set(18, 22);
@@ -875,8 +875,8 @@ impl<'a> FusedIterator for OneIter<'a> {}
 /// # Examples
 ///
 /// ```
-/// use simple_sds::ops::{BitVec, SelectZero};
-/// use simple_sds::rl_vector::{RLVector, RLBuilder};
+/// use simple_sds_sbwt::ops::{BitVec, SelectZero};
+/// use simple_sds_sbwt::rl_vector::{RLVector, RLBuilder};
 ///
 /// let mut builder = RLBuilder::new();
 /// builder.try_set(18, 22);

@@ -44,9 +44,9 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bit_vector::BitVector;
-/// use simple_sds::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
-/// use simple_sds::raw_vector::{RawVector, AccessRaw};
+/// use simple_sds_sbwt::bit_vector::BitVector;
+/// use simple_sds_sbwt::ops::{BitVec, Rank, Select, SelectZero, PredSucc};
+/// use simple_sds_sbwt::raw_vector::{RawVector, AccessRaw};
 ///
 /// let mut data = RawVector::with_len(137, false);
 /// data.set_bit(1, true); data.set_bit(33, true); data.set_bit(95, true); data.set_bit(123, true);
@@ -119,8 +119,8 @@ impl BitVector {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::BitVector;
-    /// use simple_sds::ops::BitVec;
+    /// use simple_sds_sbwt::bit_vector::BitVector;
+    /// use simple_sds_sbwt::ops::BitVec;
     /// use std::iter::FromIterator;
     ///
     /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
@@ -148,8 +148,8 @@ impl BitVector {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bit_vector::BitVector;
-/// use simple_sds::ops::BitVec;
+/// use simple_sds_sbwt::bit_vector::BitVector;
+/// use simple_sds_sbwt::ops::BitVec;
 ///
 /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false];
 /// let bv: BitVector = source.iter().cloned().collect();
@@ -398,8 +398,8 @@ impl Transformation for Complement {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::bit_vector::BitVector;
-/// use simple_sds::ops::{BitVec, Select, SelectZero};
+/// use simple_sds_sbwt::bit_vector::BitVector;
+/// use simple_sds_sbwt::ops::{BitVec, Select, SelectZero};
 ///
 /// let source: Vec<bool> = vec![true, false, true, true, false, true, true, false, true];
 /// let bv: BitVector = source.into_iter().collect();

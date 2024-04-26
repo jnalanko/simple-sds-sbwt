@@ -17,9 +17,9 @@ use std::ops::Range;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::int_vector::IntVector;
-/// use simple_sds::ops::{Vector, Access};
-/// use simple_sds::rl_vector::index::SampleIndex;
+/// use simple_sds_sbwt::int_vector::IntVector;
+/// use simple_sds_sbwt::ops::{Vector, Access};
+/// use simple_sds_sbwt::rl_vector::index::SampleIndex;
 ///
 /// let values: Vec<usize> = vec![0, 33, 124, 131, 224, 291, 322, 341, 394, 466, 501];
 /// let index = SampleIndex::new(values.iter().copied(), 540);

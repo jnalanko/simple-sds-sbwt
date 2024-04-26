@@ -82,8 +82,8 @@ mod tests;
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::Serialize;
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::Serialize;
+/// use simple_sds_sbwt::serialize;
 /// use std::{fs, io, mem};
 ///
 /// #[derive(PartialEq, Eq, Debug)]
@@ -372,8 +372,8 @@ pub enum MappingMode {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::{MemoryMap, MappingMode, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MemoryMap, MappingMode, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let v: Vec<u64> = vec![123, 456];
@@ -511,8 +511,8 @@ impl Drop for MemoryMap {
 /// # Example
 ///
 /// ```
-/// use simple_sds::serialize::{MappingMode, MemoryMap, MemoryMapped, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MappingMode, MemoryMap, MemoryMapped, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::io::{Error, ErrorKind};
 /// use std::{fs, io, slice};
 ///
@@ -598,8 +598,8 @@ pub trait MemoryMapped<'a>: Sized {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::{MappedSlice, MappingMode, MemoryMap, MemoryMapped, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MappedSlice, MappingMode, MemoryMap, MemoryMapped, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let v: Vec<(u64, u64)> = vec![(123, 456), (789, 101112)];
@@ -697,8 +697,8 @@ impl<'a, T: Serializable> MemoryMapped<'a> for MappedSlice<'a, T> {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::{MappedBytes, MappingMode, MemoryMap, MemoryMapped, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MappedBytes, MappingMode, MemoryMap, MemoryMapped, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let v: Vec<u8> = vec![1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233];
@@ -796,8 +796,8 @@ impl<'a> MemoryMapped<'a> for MappedBytes<'a> {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::{MappedStr, MappingMode, MemoryMap, MemoryMapped, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MappedStr, MappingMode, MemoryMap, MemoryMapped, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let s = String::from("GATTACA");
@@ -884,8 +884,8 @@ impl<'a> MemoryMapped<'a> for MappedStr<'a> {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize::{MappedOption, MappedSlice, MappingMode, MemoryMap, MemoryMapped, Serialize};
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize::{MappedOption, MappedSlice, MappingMode, MemoryMap, MemoryMapped, Serialize};
+/// use simple_sds_sbwt::serialize;
 /// use std::fs;
 ///
 /// let some: Option<Vec<u64>> = Some(vec![123, 456, 789]);
@@ -1035,7 +1035,7 @@ static TEMP_FILE_COUNTER: AtomicUsize = AtomicUsize::new(0);
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize;
+/// use simple_sds_sbwt::serialize;
 ///
 /// let filename = serialize::temp_file_name("example");
 /// assert!(filename.into_os_string().into_string().unwrap().contains("example"));
@@ -1062,7 +1062,7 @@ pub fn temp_file_name(name_part: &str) -> PathBuf {
 /// # Examples
 ///
 /// ```
-/// use simple_sds::serialize;;
+/// use simple_sds_sbwt::serialize;;
 ///
 /// let v: Vec<u64> = vec![1, 11, 111, 1111];
 /// let _ = serialize::test(&v, "vec-u64", Some(1 + v.len()), true);

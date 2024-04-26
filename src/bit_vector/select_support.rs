@@ -89,8 +89,8 @@ impl<T: Transformation> SelectSupport<T> {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::{BitVector, Identity};
-    /// use simple_sds::bit_vector::select_support::SelectSupport;
+    /// use simple_sds_sbwt::bit_vector::{BitVector, Identity};
+    /// use simple_sds_sbwt::bit_vector::select_support::SelectSupport;
     ///
     /// let mut data = vec![false, true, true, false, true, false, true, true, false, false, false];
     /// let bv: BitVector = data.into_iter().collect();
@@ -166,8 +166,8 @@ impl<T: Transformation> SelectSupport<T> {
     /// # Examples
     ///
     /// ```
-    /// use simple_sds::bit_vector::{BitVector, Identity};
-    /// use simple_sds::bit_vector::select_support::SelectSupport;
+    /// use simple_sds_sbwt::bit_vector::{BitVector, Identity};
+    /// use simple_sds_sbwt::bit_vector::select_support::SelectSupport;
     ///
     /// let mut data = vec![false, true, true, false, true, false, true, true, false, false, false];
     /// let bv: BitVector = data.into_iter().collect();
