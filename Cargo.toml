@@ -1,5 +1,5 @@
 [package]
-name = "simple_sds_sbwt"
+name = "simple-sds-sbwt"
 version = "0.3.1"
 edition = "2018"
 description = "A fork of simple-sds used in the sbwt crate."
