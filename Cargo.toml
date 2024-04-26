@@ -1,12 +1,11 @@
 [package]
-name = "simple-sds"
+name = "simple_sds_sbwt"
 version = "0.3.1"
-authors = ["Jouni Siren <jouni.siren@iki.fi>"]
 edition = "2018"
-description = "Basic succinct data structures."
+description = "A fork of simple-sds used in the sbwt crate."
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/jltsiren/simple-sds"
+repository = "https://github.com/jnalanko/simple-sds-sbwt/"
 
 [features]
 binaries = ["getopts", "rand", "rand_distr"]

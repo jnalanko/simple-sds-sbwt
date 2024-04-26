@@ -1,3 +1,7 @@
+# Simple-sds-sbwt
+
+This is a fork of [simple-sds](https://github.com/jltsiren/simple-sds) used in the sbwt crate.
+
 # Simple succinct data structures
 
 These structures are comparable to those in [SDSL](https://github.com/simongog/sdsl-lite) in performance and scalability.
